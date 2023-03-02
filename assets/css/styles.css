@@ -34,3 +34,15 @@ body.admin-bar {
   margin: 0 auto;
   padding: 0 16px;
 }
+.v-input {
+  @apply block w-full p-4 text-xs bg-gray-200 rounded-md md:text-base md:p-6 focus-visible:outline-secondary;
+}
+.v-input-email {
+  @apply block w-full p-4 mb-4 text-xs bg-gray-200 rounded-md md:text-base md:p-6 focus-visible:outline-secondary;
+}
+.v-input-textarea {
+  @apply block w-full p-4 text-xs bg-gray-200 rounded-md md:text-base md:p-6 focus-visible:outline-secondary;
+}
+.v-input-submit {
+  @apply block text-sm md:text-xl text-white border-secondary border bg-secondary py-3 md:py-4 px-10 rounded min-w-[224px] md:min-w-[182px] text-center hover:bg-white hover:text-secondary duration-200 mx-auto md:mx-0 cursor-pointer;
+}

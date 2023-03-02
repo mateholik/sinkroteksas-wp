@@ -23,28 +23,33 @@
         </div>
     </header> -->
 
+  <?php
+    $logo = get_field('logo', 'option');
+    $phone_1 = get_field('phone_1', 'option');
+    $phone_2 = get_field('phone_2', 'option');
+    $address = get_field('address', 'option');
+?>
+
   <header>
     <div class="container">
       <div class="flex justify-between items-center">
-        <img class="max-w-[200px] lg:max-w-[260px] xl:max-w-[316px]"
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo" />
+        <img class="max-w-[200px] lg:max-w-[260px] xl:max-w-[316px]" src="<?php echo $logo; ?>" alt="logo" />
         <div class="hidden lg:flex">
-          <a class="text-sm xl:text-base flex items-center mr-8" href="tel:+37069818357">
+          <a class="text-sm xl:text-base flex items-center mr-8" href="tel:+<?php echo $phone_1; ?>">
             <img class="w-6 h-6 mr-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/phone.svg"
               alt="phone" />
-            +37069818357
+            <?php echo $phone_1; ?>
           </a>
-          <a class="text-sm xl:text-base flex items-center mr-8" href="tel:+37068246387">
+          <a class="text-sm xl:text-base flex items-center mr-8" href="tel:<?php echo $phone_1; ?>">
             <img class="w-6 h-6 mr-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/phone.svg"
               alt="phone" />
-            +37068246387
+            <?php echo $phone_1; ?>
           </a>
-          <a class="text-sm xl:text-base flex items-center" href="tel:+37068246387">
+          <div class="text-sm xl:text-base flex items-center">
             <img class="w-6 h-6 mr-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/map.svg"
               alt="phone" />
-            Tarpučių g. 216A, Skaisčiūnų k. <br />
-            Marijampolės sav., LT-69338
-          </a>
+            <?php echo $address; ?>
+          </div>
         </div>
         <div class="hidden lg:flex items-center">
           <a href="#" class="block mr-6">
