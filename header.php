@@ -33,7 +33,9 @@
   <header>
     <div class="container">
       <div class="flex justify-between items-center">
-        <img class="max-w-[200px] lg:max-w-[260px] xl:max-w-[316px]" src="<?php echo $logo; ?>" alt="logo" />
+        <a href="<?php echo get_home_url(); ?>" class="block max-w-[200px] lg:max-w-[260px] xl:max-w-[316px]">
+          <img class="w-full" src="<?php echo $logo; ?>" alt="logo" />
+        </a>
         <div class="hidden lg:flex">
           <a class="text-sm xl:text-base flex items-center mr-8" href="tel:+<?php echo $phone_1; ?>">
             <img class="w-6 h-6 mr-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/phone.svg"

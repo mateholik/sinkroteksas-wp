@@ -137,36 +137,17 @@
 
 <section class="pb-12 md:pb-24">
   <div class="container">
-    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl">
-      <?php echo get_field('contacts')['section_title']; ?>
+    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
+      <?php echo get_field('contacts_global')['section_title']; ?>
     </h2>
     <div class="md:flex md:space-x-10 mb-4">
       <div class="w-full md:max-w-[506px] shrink-0">
-        <!-- <form>
-          <div class="mb-4">
-            <div class="md:grid gap-x-4 grid grid-cols-2 mb-4">
-              <input type="text" placeholder="Full name"
-                class="text-input" />
 
-              <input class="text-xs md:text-base p-4 md:p-6 bg-gray-200 rounded-md block" type="text"
-                placeholder="Last name" />
-            </div>
-            <input class="text-xs md:text-base p-4 md:p-6 bg-gray-200 rounded-md w-full mb-4 block" type="mail"
-              placeholder="Your email" />
-            <textarea class="text-xs md:text-base p-4 md:p-6 bg-gray-200 rounded-md w-full block" placeholder="Massage"
-              rows="8"></textarea>
-          </div>
-          <button
-            class="block text-sm md:text-xl text-white border-secondary border bg-secondary py-3 md:py-4 px-10 rounded min-w-[224px] md:min-w-[182px] text-center hover:bg-white hover:text-secondary duration-200 mx-auto md:mx-0"
-            type="submit">
-            Send
-          </button>
-        </form> -->
-        <?php echo do_shortcode( get_field('contacts')['form'] ); ?>
+        <?php echo do_shortcode( get_field('contacts_global')['form'] ); ?>
 
       </div>
       <div class="hidden md:block relative w-full rounded-md overflow-hidden max-h-[416px]">
-        <img src="<?php echo get_field('contacts')['background_image']; ?>" alt="hero background"
+        <img src="<?php echo get_field('contacts_global')['background_image']; ?>" alt="hero background"
           class="absolute inset-0 -z-20 w-full h-full object-cover object-left md:object-center" />
         <div class="absolute inset-0 -z-10 bg-primary opacity-60"></div>
       </div>

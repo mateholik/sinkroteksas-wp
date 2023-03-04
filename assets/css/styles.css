@@ -34,6 +34,9 @@ body.admin-bar {
   margin: 0 auto;
   padding: 0 16px;
 }
+.v-inputs-holder {
+  @apply md:grid gap-x-4 grid grid-cols-2 mb-4;
+}
 .v-input {
   @apply block w-full p-4 text-xs bg-gray-200 rounded-md md:text-base md:p-6 focus-visible:outline-secondary;
 }
