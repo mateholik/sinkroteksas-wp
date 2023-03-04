@@ -19,9 +19,11 @@
 <?php if(get_field('title_and_content')['content']) { ?>
 <section class="pt-12 md:pt-24">
   <div class="container">
+    <?php if(get_field('title_and_content')['title']) { ?>
     <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
       <?php echo get_field('title_and_content')['title']; ?>
     </h2>
+    <?php } ?>
     <div class="text-center leading-loose">
       <?php echo get_field('title_and_content')['content']; ?>
     </div>

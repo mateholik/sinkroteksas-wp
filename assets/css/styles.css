@@ -35,7 +35,7 @@ body.admin-bar {
   padding: 0 16px;
 }
 .v-inputs-holder {
-  @apply md:grid gap-x-4 grid grid-cols-2 mb-4;
+  @apply grid grid-cols-2 mb-4 md:grid gap-x-4;
 }
 .v-input {
   @apply block w-full p-4 text-xs bg-gray-200 rounded-md md:text-base md:p-6 focus-visible:outline-secondary;
@@ -48,4 +48,8 @@ body.admin-bar {
 }
 .v-input-submit {
   @apply block text-sm md:text-xl text-white border-secondary border bg-secondary py-3 md:py-4 px-10 rounded min-w-[224px] md:min-w-[182px] text-center hover:bg-white hover:text-secondary duration-200 mx-auto md:mx-0 cursor-pointer;
+}
+
+iframe {
+  @apply w-full h-[390px] md:h-[610px];
 }
