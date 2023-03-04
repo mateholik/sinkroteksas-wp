@@ -51,7 +51,7 @@
 
 <section class="py-12 md:py-24">
   <div class="container">
-    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl">
+    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
       <?php echo get_field('services')['section_title']; ?>
     </h2>
     <div class="grid grid-cols-2 md:grid-cols-4">
@@ -100,7 +100,7 @@
           class="w-full h-full object-cover object-center" />
       </div>
       <div class="w-full md:max-w-[468px] shrink-0 text-white">
-        <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl">
+        <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
           <?php echo get_field('about')['section_title']; ?>
         </h2>
         <p class="text-center leading-loose mb-10">
@@ -117,7 +117,7 @@
 
 <section class="py-12 md:py-24">
   <div class="container">
-    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl">
+    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
       <?php echo get_field('clients')['section_title']; ?>
     </h2>
     <div class="flex justify-between space-x-10 overflow-auto h-20">

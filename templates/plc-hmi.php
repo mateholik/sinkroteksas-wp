@@ -1,4 +1,4 @@
-<?php /* Template Name:  Industrial process automation */ ?>
+<?php /* Template Name: PLC & HMI programming */ ?>
 <?php get_header() ?>
 
 
@@ -26,11 +26,13 @@
       if( $rows ) {
           foreach( $rows as $index=>$row ) { ?>
 
-      <a href=" <?php echo $row['link']['link'] ?>" class="text-center md:border-r md:last:border-r-0 px-4 md:px-6 border-gray-500 flex flex-col justify-between group pb-4  
+      <div class="text-center md:border-r px-4 md:px-6 border-gray-500 flex flex-col justify-between group pb-4  
         <?php echo $index == 0 ? 'border-r border-b md:border-b-0' : '' ?> 
         <?php echo $index == 1 ? 'border-b md:border-b-0' : '' ?>
-        <?php echo $index == 2 ? 'border-r pt-4 md:pt-0' : '' ?>
-        <?php echo $index == 3 ? 'pt-4 md:pt-0' : '' ?>
+        <?php echo $index == 2 ? 'border-r border-b md:border-b-0 pt-4 md:pt-0' : '' ?>
+        <?php echo $index == 3 ? 'pt-4 border-b md:border-b-0 md:pt-0' : '' ?>
+        <?php echo $index == 4 ? 'border-r  md:border-l md:mt-12 pt-4 md:pt-0' : '' ?>
+        <?php echo $index == 5 ? 'md:mt-12 pt-4 md:pt-0' : '' ?>
         ">
         <div>
           <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto"
@@ -40,14 +42,13 @@
           </div>
 
         </div>
+      </div>
 
-      </a>
+      <?php   if($index == 3) echo '<div class="hidden md:block"></div>' ?>
 
       <?php  } } ?>
 
     </div>
-
-
   </div>
 </section>
 
@@ -62,27 +63,21 @@
   </div>
 </section>
 
-<section class="pb-12 md:pb-0">
+<section class="pb-12 md:pb-24">
   <div class="container">
-    <div class="md:flex justify-center flex-wrap">
+    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
+      <?php echo get_field('work_with')['section_title']; ?> niu
+    </h2>
+    <div class="grid grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center">
+
       <?php 
-      $rows = get_field('why_us');
+      $rows = get_field('work_with')['partner'];
       if( $rows ) {
           foreach( $rows as $index=>$row ) { ?>
 
-
-      <div class="md:w-1/3 md:px-4 md:mb-8 lg:px-12 lg:mb-24">
-        <div class="border-2 p-4 mb-4 md:mb-0 md:py-16 md:px-9 rounded-md border-gray-700 h-full">
-          <div class="mb-4 md:mb-0 md:text-xl font-semibold text-center">
-            <?php echo $row['title'] ?>
-          </div>
-          <div class="hidden md:block h-px w-full bg-gray-700 my-4"></div>
-          <p class="text-sm md:text-base text-center font-medium">
-            <?php echo $row['text'] ?>
-          </p>
-        </div>
+      <div>
+        <img class="mx-auto" src="    <?php echo $row['image'] ?>" alt="partner" />
       </div>
-
 
       <?php  } } ?>
 
