@@ -1,4 +1,4 @@
-<?php /* Template Name: PLC & HMI programming */ ?>
+<?php /* Template Name: Electrical assembly */ ?>
 <?php get_header() ?>
 
 
@@ -20,19 +20,16 @@
     <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
       <?php echo get_field('services')['section_title']; ?>
     </h2>
-    <div class="grid grid-cols-2 md:grid-cols-4">
+    <div class="grid grid-cols-2 md:grid-cols-3">
       <?php 
       $rows = get_field('services')['blocks'];
       if( $rows ) {
           foreach( $rows as $index=>$row ) { ?>
 
-      <div class="text-center md:border-r px-4 md:px-6 border-gray-500 flex flex-col justify-between group pb-4  
+      <div class="text-center px-4 md:px-6 border-gray-500 flex flex-col justify-between group pb-4  
         <?php echo $index == 0 ? 'border-r border-b md:border-b-0' : '' ?> 
-        <?php echo $index == 1 ? 'border-b md:border-b-0' : '' ?>
-        <?php echo $index == 2 ? 'border-r border-b md:border-b-0 pt-4 md:pt-0' : '' ?>
-        <?php echo $index == 3 ? 'pt-4 border-b md:border-b-0 md:pt-0' : '' ?>
-        <?php echo $index == 4 ? 'border-r  md:border-l md:mt-12 pt-4 md:pt-0' : '' ?>
-        <?php echo $index == 5 ? 'md:mt-12 pt-4 md:pt-0' : '' ?>
+        <?php echo $index == 1 ? 'md:border-r border-r-0 border-b md:border-b-0' : '' ?>
+        <?php echo $index == 2 ? 'border-r md:border-r-0 md:border-b-0 pt-4 md:pt-0' : '' ?>
         ">
         <div>
           <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto"
@@ -44,13 +41,38 @@
         </div>
       </div>
 
-      <?php   if($index == 3) echo '<div class="hidden md:block"></div>' ?>
-
       <?php  } } ?>
 
     </div>
   </div>
 </section>
+
+
+
+
+
+<section class="pb-12 md:pb-24">
+  <div class="container">
+    <div class="grid grid-cols-1  md:grid-cols-3 gap-6">
+      <?php 
+      $rows = get_field('images');
+      if( $rows ) {
+          foreach( $rows as $index=>$row ) { ?>
+
+      <div class="h-[200px] md:h-auto">
+        <img class="w-full h-full object-cover" src="<?php echo $row['image'] ?>" alt="image">
+      </div>
+
+      <?php  } } ?>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
 <section class="pb-12 md:pb-24">
   <div class="container">
@@ -59,28 +81,6 @@
     </h2>
     <div class="text-center leading-loose">
       <?php echo get_field('title_and_content')['content']; ?>
-    </div>
-  </div>
-</section>
-
-<section class="pb-12 md:pb-24">
-  <div class="container">
-    <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
-      <?php echo get_field('work_with')['section_title']; ?>
-    </h2>
-    <div class="grid grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center">
-
-      <?php 
-      $rows = get_field('work_with')['partner'];
-      if( $rows ) {
-          foreach( $rows as $index=>$row ) { ?>
-
-      <div>
-        <img class="mx-auto" src="    <?php echo $row['image'] ?>" alt="partner" />
-      </div>
-
-      <?php  } } ?>
-
     </div>
   </div>
 </section>
