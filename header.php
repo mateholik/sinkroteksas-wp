@@ -41,13 +41,9 @@
             <?php echo $address; ?>
           </div>
         </div>
-        <div class="hidden lg:flex items-center">
-          <a href="#" class="block mr-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/flag-en.svg" alt="flag-en" />
-          </a>
-          <a href="#" class="block">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/flag-lt.svg" alt="flag-en" />
-          </a>
+        <div class="v-langs hidden lg:flex items-center">
+
+          <?php pll_the_languages( array( 'show_flags' => 1,'show_names' => 0 ) ); ?>
         </div>
         <img id="burger" class="w-12 h-12 block lg:hidden"
           src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/burger.svg" alt="menu" />
@@ -65,6 +61,9 @@
         <img id="close" class="close" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/close.svg"
           alt="menu" />
         <?php wp_nav_menu(    array (  'theme_location' => 'main-menu'  )  ); ?>
+        <div class="v-langs flex items-center justify-end mt-8">
+          <?php pll_the_languages( array( 'show_flags' => 1,'show_names' => 0 ) ); ?>
+        </div>
       </div>
     </nav>
   </header>

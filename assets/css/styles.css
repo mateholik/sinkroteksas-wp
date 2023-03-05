@@ -56,3 +56,10 @@ body.admin-bar {
 iframe {
   @apply w-full h-[390px] md:h-[610px];
 }
+
+.v-langs {
+  @apply list-none;
+}
+.v-langs li:first-of-type {
+  @apply mr-6;
+}
