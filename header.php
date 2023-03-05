@@ -49,48 +49,22 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/flag-lt.svg" alt="flag-en" />
           </a>
         </div>
-        <img class="w-12 h-12 block lg:hidden"
+        <img id="burger" class="w-12 h-12 block lg:hidden"
           src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/burger.svg" alt="menu" />
       </div>
     </div>
     <nav class="hidden lg:block bg-primary">
       <div class="container">
-        <div class="v-menu">
+        <div class="desktop-menu">
           <?php wp_nav_menu(    array (  'theme_location' => 'main-menu'  )  ); ?>
         </div>
-        <!-- <ul class="flex py-7 justify-center">
-          <li class="hover:text-secondary duration-200">
-            <a class="block mr-7 text-xl text-white group" href="#">Home
-              <span class="block bg-secondary h-px w-0 group-hover:w-full duration-200"></span></a>
-          </li>
-          <li>
-            <a class="mr-7 text-xl text-white" href="">Vacuum cooling</a>
-          </li>
-          <li>
-            <a class="mr-7 text-xl text-white" href="">About us</a>
-          </li>
-          <li>
-            <div class="relative flex items-center mr-7 text-xl text-white group">
-              Solutions
-              <img class="w-3 h-[6px] ml-2"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow-white.svg" alt="arrow" />
-              <ul class="hidden group-hover:block absolute top-7 left-0 bg-primary p-2">
-                <li>
-                  <a class="py-2 font-medium text-base whitespace-nowrap text-white" href="">Industrial process
-                    automation</a>
-                </li>
-                <li>
-                  <a class="py-2 font-medium text-base whitespace-nowrap text-white" href="">PLC & HMI programming</a>
-                </li>
-                <li>
-                  <a class="py-2 font-medium text-base whitespace-nowrap text-white" href="">Electrical assembly</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li><a class="mr-7 text-xl text-white" href="">Project</a></li>
-          <li><a class="mr-7 text-xl text-white" href="">Contact</a></li>
-        </ul> -->
+      </div>
+    </nav>
+    <nav id="mobileMenu" class="mobile-menu">
+      <div class="content">
+        <img id="close" class="close" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/close.svg"
+          alt="menu" />
+        <?php wp_nav_menu(    array (  'theme_location' => 'main-menu'  )  ); ?>
       </div>
     </nav>
   </header>
