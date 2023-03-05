@@ -38,33 +38,8 @@ add_action( 'wp_enqueue_scripts', function() {
 
     } else {
 
-        // production version, 'npm run build' must be executed in order to generate assets
-        // ----------
-
-        // read manifest.json to figure out what to enqueue
-        $manifest = json_decode( file_get_contents( DIST_PATH . '/manifest.json'), true );
-        
-        // is ok
-        if (is_array($manifest)) {
-            
-            // get first key, by default is 'main.js' but it can change
-            $manifest_key = array_keys($manifest);
-            if (isset($manifest_key[0])) {
-                
-                // enqueue CSS files
-                foreach(@$manifest[$manifest_key[0]]['css'] as $css_file) {
-                    wp_enqueue_style( 'main', DIST_URI . '/' . $css_file );
-                }
-                
-                // enqueue main JS file
-                $js_file = @$manifest[$manifest_key[0]]['file'];
-                if ( ! empty($js_file)) {
-                    wp_enqueue_script( 'main', DIST_URI . '/' . $js_file, JS_DEPENDENCY, '', JS_LOAD_IN_FOOTER );
-                }
-                
-            }
-
-        }
+        wp_enqueue_style( 'global-css', get_stylesheet_directory_uri() . '/global.css', false, '1.0', 'all' ); 
+        wp_enqueue_script( 'global-js', get_stylesheet_directory_uri() . '/global.js');
 
     }
 
