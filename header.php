@@ -10,18 +10,6 @@
 </head>
 
 <body <?php body_class('flex flex-col h-screen') ?>>
-  <?php wp_body_open(); ?>
-
-  <!-- <header class="flex-0 bg-slate-100 px-4 border shadow-md">
-        <div class="max-w-screen-lg mx-auto flex justify-between items-center min-h-[40px]">
-            <div class="">
-                <a href="<?php echo home_url() ?>">Logo</a>
-            </div>
-            <div>
-                <?php echo wp_nav_menu() ?>
-            </div>
-        </div>
-    </header> -->
 
   <?php
     $logo = get_field('logo', 'option');
@@ -67,7 +55,10 @@
     </div>
     <nav class="hidden lg:block bg-primary">
       <div class="container">
-        <ul class="flex py-7 justify-center">
+        <div class="v-menu">
+          <?php wp_nav_menu(    array (  'theme_location' => 'main-menu'  )  ); ?>
+        </div>
+        <!-- <ul class="flex py-7 justify-center">
           <li class="hover:text-secondary duration-200">
             <a class="block mr-7 text-xl text-white group" href="#">Home
               <span class="block bg-secondary h-px w-0 group-hover:w-full duration-200"></span></a>
@@ -99,7 +90,7 @@
           </li>
           <li><a class="mr-7 text-xl text-white" href="">Project</a></li>
           <li><a class="mr-7 text-xl text-white" href="">Contact</a></li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
   </header>

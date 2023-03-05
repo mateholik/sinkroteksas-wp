@@ -16,12 +16,15 @@
 @import "./custom-utilities.css";
 */
 
+@import "menu.scss";
+
 /* admin bar fix */
 body.admin-bar {
   max-height: calc(100vh - 32px);
 }
 
 /* custom */
+
 @layer base {
   html {
     font-family: "Montserrat", sans-serif;

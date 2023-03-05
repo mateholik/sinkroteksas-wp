@@ -50,3 +50,8 @@ function reset_default_image($value, $post_id, $field) {
     return $value;
   }
   add_filter('acf/load_value/type=image', 'reset_default_image', 10, 3);
+
+function register_menus() { 
+  register_nav_menu('main-menu',__('Main Menu')); 
+} 
+add_action('init', 'register_menus');
