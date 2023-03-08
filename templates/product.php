@@ -22,21 +22,70 @@
       <?php echo get_field('tech_specification')['section_title']; ?>
     </h2>
 
-    <?php 
-      $rows = get_field('tech_specification')['block'];
-      if( $rows ) {
+    <div class="md:flex md:space-x-8">
+      <div class="md:w-1/2">
+        <?php 
+        $rows = get_field('tech_specification')['block'];
+        if( $rows ) {
           foreach( $rows as $index=>$row ) { ?>
 
-    <div class="mb-6 md:mb-10">
-      <div class="font-medium text-xl md:text-2xl mb-4">
-        <?php echo $row['title'] ?>
+        <div class="mb-6 md:mb-10">
+          <div class="font-medium text-xl md:text-2xl mb-4">
+            <?php echo $row['title'] ?>
+          </div>
+          <div class="text-sm md:text-xl">
+            <?php echo $row['content'] ?>
+          </div>
+        </div>
+
+        <?php  } } ?>
       </div>
-      <div class="text-sm md:text-xl">
-        <?php echo $row['content'] ?>
+
+
+      <div class="md:w-1/2">
+        <div>
+          <?php 
+        $rows = get_field('tech_specification')['media_blocks']['image'];
+        if( $rows ) {
+          foreach( $rows as $index=>$row ) { ?>
+
+          <div class="mb-6 md:mb-10">
+            <img src=" <?php echo $row['image'] ?>" alt="<?php echo $row['title'] ?>">
+            <div class="font-medium text-xl md:text-2xl mt-4">
+              <?php echo $row['title'] ?>
+            </div>
+
+          </div>
+
+          <?php  } } ?>
+        </div>
+
+        <div>
+          <?php 
+        $rows = get_field('tech_specification')['media_blocks']['video'];
+        if( $rows ) {
+          foreach( $rows as $index=>$row ) { ?>
+
+          <div class="mb-6 md:mb-10">
+
+
+            <div class="relative h-0 pb-[56.25%]">
+              <iframe class="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/<?php echo $row['youtube_video_link'] ?>"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen></iframe>
+            </div>
+
+            <div class="font-medium text-xl md:text-2xl mt-4">
+              <?php echo $row['title'] ?>
+            </div>
+
+          </div>
+
+          <?php  } } ?>
+        </div>
       </div>
     </div>
-
-    <?php  } } ?>
 
   </div>
 </section>

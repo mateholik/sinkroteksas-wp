@@ -1,6 +1,6 @@
 {
   "main.css": {
-    "file": "assets/main-6ca045f8.css",
+    "file": "assets/main-885b47c5.css",
     "src": "main.css"
   },
   "main.js": {
@@ -8,7 +8,7 @@
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main-6ca045f8.css"
+      "assets/main-885b47c5.css"
     ]
   }
 }

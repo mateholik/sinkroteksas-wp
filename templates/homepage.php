@@ -49,6 +49,7 @@
   </div>
 </section>
 
+
 <section class="py-12 md:py-24">
   <div class="container">
     <h2 class="mb-8 md:mb-12 text-center font-medium text-2xl md:text-3xl uppercase">
@@ -67,8 +68,8 @@
         <?php echo $index == 3 ? 'pt-4 md:pt-0' : '' ?>
         ">
         <div>
-          <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto"
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/service.png" alt="" />
+          <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto" src="<?php echo $row['icon'] ?>"
+            alt="icon" />
           <div class="font-medium md:text-lg md:mb-5 mb-4 text-xs">
             <?php echo $row['title'] ?>
           </div>
@@ -88,6 +89,19 @@
 
   </div>
 </section>
+
+<?php if(get_field('youtube_link_id')) { ?>
+<section class="relative pb-12 md:pb-24">
+  <div class="container">
+    <div class="relative h-0 pb-[56.25%]">
+      <iframe class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/<?php echo get_field('youtube_link_id') ?>"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen></iframe>
+    </div>
+  </div>
+</section>
+<?php } ?>
 
 <section class="relative py-12 md:py-24">
   <img src="<?php echo get_field('about')['background_image']; ?>" alt="hero background"

@@ -33,8 +33,8 @@
         <?php echo $index == 3 ? 'pt-4 md:pt-0' : '' ?>
         ">
         <div>
-          <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto"
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/service.png" alt="" />
+          <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto" src="<?php echo $row['icon'] ?>"
+            alt="icon" />
           <div class="font-medium md:text-lg md:mb-5 mb-4 text-xs">
             <?php echo $row['title'] ?>
           </div>
@@ -50,6 +50,26 @@
 
   </div>
 </section>
+
+
+<?php if(get_field('images')) { ?>
+<section class="pb-12 md:pb-24">
+  <div class="container">
+    <div class="grid grid-cols-1  md:grid-cols-3 gap-6">
+      <?php 
+      $rows = get_field('images');
+      if( $rows ) {
+          foreach( $rows as $index=>$row ) { ?>
+
+      <div class="h-[200px] md:h-auto">
+        <img class="w-full h-full object-cover" src="<?php echo $row['image'] ?>" alt="image">
+      </div>
+
+      <?php  } } ?>
+    </div>
+  </div>
+</section>
+<?php } ?>
 
 <section class="pb-12 md:pb-24">
   <div class="container">

@@ -32,8 +32,8 @@
         <?php echo $index == 2 ? 'border-r md:border-r-0 md:border-b-0 pt-4 md:pt-0' : '' ?>
         ">
         <div>
-          <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto"
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/service.png" alt="" />
+          <img class="md:w-[72px] md:h-[72px] w-[48px] h-[48px] mb-4 mx-auto" src="<?php echo $row['icon'] ?>"
+            alt="icon" />
           <div class="font-medium md:text-lg md:mb-5 mb-4 text-xs">
             <?php echo $row['title'] ?>
           </div>

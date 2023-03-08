@@ -38,8 +38,9 @@
       $rows = get_field('product');
       if( $rows ) {
           foreach( $rows as $index=>$row ) { ?>
-      <a href="  <?php echo $row['link'] ?>" class="block">
-        <img src="  <?php echo $row['image'] ?>" alt="" />
+      <a href="<?php echo $row['link'] ?>" class="block group">
+        <img src="<?php echo $row['image'] ?>" alt="<?php echo $row['name'] ?>"
+          class="block group-hover:scale-95 transform duration-200" />
         <p class="font-semibold md:text-xl mt-2 md:mt-4 text-center">
           <?php echo $row['name'] ?>
         </p>
@@ -67,8 +68,8 @@
       <div class="md:text-center md:border-r px-4 md:px-6 border-gray-500 mb-8 last:mb-0 md:mb-0 ">
         <div>
           <div class="flex items-center justify-center md:flex-col">
-            <img class="md:w-[72px] md:h-[72px] w-10 h-10 md:mb-4 mr-4 md:mr-0"
-              src="<?php echo get_template_directory_uri(); ?>/assets/img/service.png" alt="icon" />
+            <img class="md:w-[72px] md:h-[72px] w-10 h-10 md:mb-4 mr-4 md:mr-0" src="<?php echo $row['icon'] ?>"
+              alt="icon" />
             <div class="font-medium md:text-lg md:mb-5">
               <?php echo $row['title'] ?>
             </div>
